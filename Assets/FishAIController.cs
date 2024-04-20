@@ -17,15 +17,12 @@ public class FishAIController : MonoBehaviour {
     [SerializeField] private Vector2 zRange;
 
     [SerializeField] private GameObject destinationTracker;
-    [SerializeField] private Vector3[] waypoints;
-    private int currWaypoint;
 
     // Start is called before the first frame update
     void Start() {
         
         state = AIState.ROAM;
         agent = GetComponent<NavMeshAgent>();
-        currWaypoint = -1;
         SetNextWaypoint();
 
     } // Start
@@ -56,14 +53,14 @@ public class FishAIController : MonoBehaviour {
     } // Update
 
     private void SetNextWaypoint() {
+    
+        Vector3 diff = lookaheadDistance * new Vector3(-1, 0, 0);
+        Vector3 dest = transform.position + diff;
 
-        if (waypoints != null && waypoints.Length > 0) {
-            
-            int len = waypoints.Length;
-            currWaypoint = (currWaypoint + 1) % len;
-            agent.SetDestination(waypoints[currWaypoint]);
+        // TODO: Add terrain avoidance/boundaries
 
-        } // if
+        agent.SetDestination(dest);
+        Debug.Log($"Curr: {transform.position} | Diff: {diff} | Dest: {dest}");
 
     } // SetNextWaypoint
 
