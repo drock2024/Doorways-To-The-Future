@@ -371,7 +371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544036484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 246.19, y: 0.78279907, z: 57.95}
+  m_LocalPosition: {x: 246.06, y: -5, z: 53.37}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 706581810}
   - component: {fileID: 706581809}
   - component: {fileID: 706581808}
+  - component: {fileID: 706581811}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -551,14 +552,47 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706581807}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.59433794, y: -0, z: -0, w: 0.8042154}
+  m_LocalPosition: {x: 241, y: 8, z: 53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 72.931, y: 0, z: 0}
+--- !u!114 &706581811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706581807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &838392686
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,9 +633,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 926791680}
-  - component: {fileID: 926791679}
   - component: {fileID: 926791678}
-  - component: {fileID: 926791681}
+  - component: {fileID: 926791679}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -622,7 +655,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 1000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -643,11 +676,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb68b740e8abfee4db03fd31cb8e748d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTracker: {fileID: 0}
+  destinationTracker: {fileID: 544036484}
   waypoints:
-  - {x: 242, y: 0.45, z: 54}
-  - {x: 240, y: 0.45, z: 57}
-  - {x: 246, y: 0.45, z: 58}
+  - {x: 241, y: 0.5, z: 56}
+  - {x: 241, y: 0.5, z: 58}
+  - {x: 246, y: 0.5, z: 58}
 --- !u!4 &926791680
 Transform:
   m_ObjectHideFlags: 0
@@ -664,23 +697,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &926791681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926791677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb68b740e8abfee4db03fd31cb8e748d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destinationTracker: {fileID: 544036484}
-  waypoints:
-  - {x: 242, y: 0.4, z: 54}
-  - {x: 240, y: 0.4, z: 57}
-  - {x: 246, y: 0.4, z: 58}
 --- !u!1 &1380095266
 GameObject:
   m_ObjectHideFlags: 0
