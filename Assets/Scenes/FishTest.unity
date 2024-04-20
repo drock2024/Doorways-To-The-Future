@@ -296,7 +296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544036484}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 0.24999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -570,6 +570,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb68b740e8abfee4db03fd31cb8e748d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookaheadDistance: 1
+  xRange: {x: -4, y: 4}
+  zRange: {x: -4, y: 4}
   destinationTracker: {fileID: 544036484}
   waypoints:
   - {x: -1.09, y: 0.5, z: -1.23}

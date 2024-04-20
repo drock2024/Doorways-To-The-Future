@@ -12,6 +12,10 @@ public class FishAIController : MonoBehaviour {
     AIState state;
     private NavMeshAgent agent;
 
+    [SerializeField] private float lookaheadDistance;
+    [SerializeField] private Vector2 xRange;
+    [SerializeField] private Vector2 zRange;
+
     [SerializeField] private GameObject destinationTracker;
     [SerializeField] private Vector3[] waypoints;
     private int currWaypoint;
