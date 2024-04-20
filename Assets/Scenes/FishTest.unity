@@ -371,7 +371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544036484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 246.06, y: 0.78279907, z: 58.38}
+  m_LocalPosition: {x: 246.19, y: 0.78279907, z: 57.95}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -644,7 +644,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destinationTracker: {fileID: 0}
-  waypoints: []
+  waypoints:
+  - {x: 242, y: 0.45, z: 54}
+  - {x: 240, y: 0.45, z: 57}
+  - {x: 246, y: 0.45, z: 58}
 --- !u!4 &926791680
 Transform:
   m_ObjectHideFlags: 0
@@ -652,7 +655,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926791677}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 245.17, y: 0.4, z: 54.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -660,7 +663,7 @@ Transform:
   - {fileID: 519547078}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &926791681
 MonoBehaviour:
   m_ObjectHideFlags: 0
