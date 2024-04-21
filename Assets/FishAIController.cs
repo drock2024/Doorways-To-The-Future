@@ -23,6 +23,7 @@ public class FishAIController : MonoBehaviour {
         
         state = AIState.ROAM;
         agent = GetComponent<NavMeshAgent>();
+        Debug.Log($"Angle: {transform.eulerAngles.y} ({(1.0f / Mathf.Rad2Deg) * transform.eulerAngles.y} Radians)");
         SetNextWaypoint();
 
     } // Start
@@ -53,8 +54,12 @@ public class FishAIController : MonoBehaviour {
     } // Update
 
     private void SetNextWaypoint() {
-    
-        Vector3 diff = lookaheadDistance * new Vector3(-1, 0, 0);
+        Debug.Log($"Set next waypoint | Angle: {transform.rotation.y}");
+        Vector3 diff = lookaheadDistance * new Vector3(
+            Mathf.Sin((1.0f / Mathf.Rad2Deg) * transform.eulerAngles.y), 
+            0, 
+            Mathf.Cos((1.0f / Mathf.Rad2Deg) * transform.eulerAngles.y)
+        );
         Vector3 dest = transform.position + diff;
 
         // TODO: Add terrain avoidance/boundaries
