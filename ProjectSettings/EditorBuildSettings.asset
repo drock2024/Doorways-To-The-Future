@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainVRScene.unity
+    guid: 2a9e925865c315f4d9e74f5bfbd414f8
+  - enabled: 1
+    path: Assets/Scenes/BestCase.unity
+    guid: d1f32a5de38ce469cba2b04d341be549
+  - enabled: 1
+    path: Assets/Scenes/MiddleCase.unity
+    guid: 7a96632520e8c45f6815994cb0c7da1b
+  - enabled: 1
+    path: Assets/Scenes/Worst Case.unity
+    guid: 8c79359790e9f4331b23fe32a58c1ace
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: eae001393ba4a964599cb97b67a9468c,
       type: 2}
