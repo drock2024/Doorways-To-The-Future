@@ -11,13 +11,16 @@ public class InstanceScene : MonoBehaviour
 
     public GameObject LobbyRoom;
 
+    public GameObject Door;
+
     public void LoadCoralScene(string scenePath) {
         targetScene = scenePath;
         SceneManager.LoadScene(targetScene, LoadSceneMode.Additive);
     }
 
     private void Update() {
-        if (XROrigin.GetComponent<Transform>().position.x > 5) {
+        float checkpoint_pos = Door.GetComponent<Transform>().position.x + 1.5f;
+        if (XROrigin.GetComponent<Transform>().position.x > checkpoint_pos) {
             LobbyRoom.SetActive(false);
         } else {
             LobbyRoom.SetActive(true);
