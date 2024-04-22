@@ -20,7 +20,16 @@ public class FishAIController : MonoBehaviour {
         
         state = AIState.ROAM;
         agent = GetComponent<NavMeshAgent>();
-        Debug.Log($"Angle: {transform.eulerAngles.y} ({(1.0f / Mathf.Rad2Deg) * transform.eulerAngles.y} Radians)");
+
+        transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+        transform.position = new Vector3(Random.Range(xRange.x, xRange.y), transform.position.y, Random.Range(zRange.x, zRange.y));
+
+        // while (Physics.CheckSphere(transform.position, agent.radius)) {
+        //     transform.position = new Vector3(Random.Range(xRange.x, xRange.y), transform.position.y, Random.Range(zRange.x, zRange.y));
+
+        // } // while
+
+        // Debug.Log($"Angle: {transform.eulerAngles.y} ({(1.0f / Mathf.Rad2Deg) * transform.eulerAngles.y} Radians)");
         SetNextWaypoint();
 
     } // Start
