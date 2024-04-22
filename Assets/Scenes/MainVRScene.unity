@@ -3319,6 +3319,7 @@ MonoBehaviour:
   targetScene: Assets/Scenes/BestCase.unity
   XROrigin: {fileID: 1630500364}
   LobbyRoom: {fileID: 1123837220}
+  Door: {fileID: 832361473}
 --- !u!1 &522380936
 GameObject:
   m_ObjectHideFlags: 0
@@ -4560,7 +4561,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 1, z: 0.4}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 3.4085295, y: 1.2080001, z: 35.97523}
+  m_ConnectedAnchor: {x: 3.4085295, y: 1.0480002, z: 35.97523}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -5263,7 +5264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &832361474
 Transform:
   m_ObjectHideFlags: 0
